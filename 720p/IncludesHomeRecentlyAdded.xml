@@ -752,6 +752,15 @@
 							<posy>206</posy>
 							<width>370</width>
 							<height>206</height>
+							<texture background="true" diffuse="home/main_movie_home_diffuse.png" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+							<colordiffuse>89FFFFFF</colordiffuse>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>206</posy>
+							<width>370</width>
+							<height>206</height>
 							<texture background="true" diffuse="home/main_movie_home_diffuse.png" flipy="true">DefaultVideoCover.png</texture>
 							<colordiffuse>89FFFFFF</colordiffuse>
 							<aspectratio>stretch</aspectratio>
