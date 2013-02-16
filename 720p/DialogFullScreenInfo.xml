@@ -80,7 +80,7 @@
 				<posy>670</posy>
 				<width>966</width>
 				<height>25</height>
-				<label>Time: $INFO[System.Time]</label>
+				<label>$LOCALIZE[142] $INFO[System.Time]</label>
 				<textcolor>Light_Grey</textcolor>
 				<font>Liberation16</font>
 				<align>left</align>
@@ -90,7 +90,7 @@
 				<posy>670</posy>
 				<width>966</width>
 				<height>25</height>
-				<label>Finish: $INFO[Player.FinishTime]</label>
+				<label>$LOCALIZE[31081] $INFO[Player.FinishTime]</label>
 				<textcolor>Light_Grey</textcolor>
 				<font>Liberation16</font>
 				<align>right</align>
@@ -124,9 +124,6 @@
 				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include>Playing_VideoCodecFlaggingConditions</include>
-				<include>Playing_AudioCodecFlaggingConditions</include>
-				<include>Playing_AspectCodecFlaggingConditions</include>
 			</control>
 		</control>
 	</controls>

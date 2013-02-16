@@ -314,20 +314,7 @@
 			</focusedlayout>
 		</control>
 	
-	<control type="label">
-		<posx>400</posx>
-		<posy>700</posy>
-		<width>451</width>
-		<height>100</height>
-		<align>center</align>
-		<font>Liberation18</font>
-		<textcolor>White</textcolor>
-		<label>[B]Press Down for New Episodes[/B]</label>
-		<include>Animation_CommonFade</include>
-		<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
-		<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-		<visible>Control.IsVisible(51) + !Window.IsVisible(movieinformation) + !Control.HasFocus(2448) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
-	</control>
+	
 			
 	<control type="fixedlist" id="2448">
 		<posx>620</posx>
@@ -349,7 +336,7 @@
 				<control type="group">
 					<posx>0</posx>
 					<posy>10</posy>
-					<animation type="Visible" reversible="false" condition="Control.HasFocus(2448))">
+					<animation type="Visible" reversible="false" condition="Control.HasFocus(2448)">
 						<effect type="slide" start="900,0" end="0,0" time="500" delay="400" />
 					</animation>
 					<visible>Control.HasFocus(2448)</visible>
@@ -378,7 +365,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="60" end="110" time="600" tween="back" easing="out" />
 					</animation>
-					<animation type="Visible" reversible="false" condition="Control.HasFocus(2448))">
+					<animation type="Visible" reversible="false" condition="Control.HasFocus(2448)">
 						<effect type="slide" start="900,0" end="0,0" time="500" delay="400" />
 					</animation>
 					<visible>Control.HasFocus(2448)</visible>
@@ -523,7 +510,7 @@
 		<textcolor>Dark_Green</textcolor>
 		<label fallback="-">[B]$INFO[Container(2448).ListItem.Property(Number)] - $INFO[Container(2448).ListItem.Label][/B]</label>
 		<include>main_window_open_close</include>
-		<animation type="Visible" reversible="false" condition="Control.HasFocus(2448))">
+		<animation type="Visible" reversible="false" condition="Control.HasFocus(2448)">
 			<effect type="slide" start="900,0" end="0,0" time="500" delay="700" />
 		</animation>
 		<visible>Container.Content(tvshows) + Control.HasFocus(2448)</visible>
@@ -538,7 +525,7 @@
 		<font>Liberation18</font>
 		<textcolor>Black</textcolor>
 		<include>main_window_open_close</include>
-		<animation type="Visible" reversible="false" condition="Control.HasFocus(2448))">
+		<animation type="Visible" reversible="false" condition="Control.HasFocus(2448)">
 			<effect type="slide" start="900,0" end="0,0" time="500" delay="600" />
 		</animation>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

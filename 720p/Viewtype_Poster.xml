@@ -241,20 +241,7 @@
 	</control>
 	
 	
-	<control type="label">
-		<posx>400</posx>
-		<posy>700</posy>
-		<width>451</width>
-		<height>100</height>
-		<align>center</align>
-		<font>Liberation18</font>
-		<textcolor>White</textcolor>
-		<label>[B]$LOCALIZE[31098][/B]</label>
-		<include>Animation_CommonFade</include>
-		<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
-		<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-		<visible>Control.IsVisible(52) + !Window.IsVisible(movieinformation) + !Control.HasFocus(2449) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
-	</control>
+	
 			
 	<control type="fixedlist" id="2449">
 		<posx>620</posx>

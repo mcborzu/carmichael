@@ -188,7 +188,7 @@
 						<label2>31056</label2>
 						<property name="dude">31065</property>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon>backgrounds/system.jpg</icon>
+						<icon>backgrounds/games.png</icon>
 					</item>
 					<!--<item id="9">
 						<label>166</label>

@@ -7,7 +7,6 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<include>VisibleFadeEffect</include>
 			<visible>!Window.IsVisible(MusicInformation)</visible>
 			<control type="label">
 				<description>Song Title value</description>

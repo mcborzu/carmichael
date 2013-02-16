@@ -56,7 +56,6 @@
 					<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)] + ![Control.HasFocus(15) | Control.IsVisible(50)]</visible>
 					<posy>90</posy>
 					<posx>210</posx>
-					<include>VisibleFadeEffect</include>
 					<control type="list" id="49">
 						<posx>236</posx>
 						<posy>340</posy>
@@ -291,7 +290,6 @@
 					<visible>Container.Content(episodes) + ![Control.HasFocus(15) | Control.IsVisible(50)]</visible>
 					<posy>90</posy>
 					<posx>210</posx>
-					<include>VisibleFadeEffect</include>
 					<control type="list" id="49">
 						<posx>236</posx>
 						<posy>350</posy>
@@ -430,7 +428,6 @@
 					<visible>container.content(musicvideos) + !Control.HasFocus(50)</visible>
 					<posy>90</posy>
 					<posx>210</posx>
-					<include>VisibleFadeEffect</include>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -486,7 +483,6 @@
 								<height>30</height>
 								<visible>Control.HasFocus(49)</visible>
 								<texture>MenuItemFO.png</texture>
-								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
 								<posx>165</posx>
@@ -706,27 +702,11 @@
 					<visible>!Skin.HasSetting(LockViews)</visible>
 				</control>
 				<control type="button" id="11">
-					<description>Play Trailer</description>
+					<description>$LOCALIZE[14098] $LOCALIZE[20410]</description>
 					<width>1</width>
 					<height>1</height>
 					<label>20410</label>
 					<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
-				</control>
-				<control type="button" id="14">
-					<description>Play Trailer</description>
-					<width>1</width>
-					<height>1</height>
-					<label>$LOCALIZE[31081]</label>
-					<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
-					<visible>Container.Content(tvshows)</visible>
-				</control>
-				<control type="button" id="17">
-					<description>tvtunes download</description>
-					<width>1</width>
-					<height>1</height>
-					<label>$LOCALIZE[31119]</label>
-					<onclick>XBMC.RunScript(script.TvTunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-					<visible>Container.Content(tvshows) + !Skin.HasSetting(LockViews)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -802,40 +782,16 @@
 						<visible>Control.HasFocus(10) + !Skin.HasSetting(LockViews)</visible>
 					</control>
 					<control type="label">
-						<description>Play Trailer</description>
+						<description>$LOCALIZE[14098] $LOCALIZE[20410]</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$INFO[Control.GetLabel(11)]</label>
 						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer) + !Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
-						<description>Play Trailer</description>
+						<description>$LOCALIZE[14098] $LOCALIZE[20410]</description>
 						<include>ButtonInfoDialogsCommonValues_Focus</include>
 						<label>$INFO[Control.GetLabel(11)]</label>
 						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer) + Control.HasFocus(11)</visible>
-					</control>
-					<control type="label">
-						<description>Get logo</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$INFO[Control.GetLabel(14)]</label>
-						<visible>!Control.HasFocus(14) + Container.Content(tvshows)</visible>
-					</control>
-					<control type="label">
-						<description>Get logo</description>
-						<include>ButtonInfoDialogsCommonValues_Focus</include>
-						<label>$INFO[Control.GetLabel(14)]</label>
-						<visible>Control.HasFocus(14) + Container.Content(tvshows)</visible>
-					</control>
-					<control type="label">
-						<description>Get tvtune</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$INFO[Control.GetLabel(17)]</label>
-						<visible>!Control.HasFocus(17) + Container.Content(tvshows)</visible>
-					</control>
-					<control type="label">
-						<description>Get tvtune</description>
-						<include>ButtonInfoDialogsCommonValues_Focus</include>
-						<label>$INFO[Control.GetLabel(17)]</label>
-						<visible>Control.HasFocus(17) + Container.Content(tvshows)</visible>
 					</control>
 			</control>
 		</control>

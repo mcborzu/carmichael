@@ -158,8 +158,6 @@
 			</control>
 		</control>
 		<!-- Confluence only -->
-		<include>CommonNowPlaying</include>
-		<include>BehindDialogFadeOut</include>
 		<!-- =============== -->
 		<control type="group">
 			<animation effect="fade" time="250">WindowOpen</animation>

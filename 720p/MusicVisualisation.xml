@@ -22,7 +22,6 @@
 					<texture background="true" fallback="backgrounds/music.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
-					<include>VisibleFadeEffect</include>
 					<visible>Skin.HasSetting(FanartNoVisualisation) + ![Skin.HasSetting(vis_photos_backdrops) | Skin.HasSetting(vis_music_backdrops)]</visible>
 				</control>
 				<control type="multiimage">

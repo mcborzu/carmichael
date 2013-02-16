@@ -73,8 +73,13 @@
 						<label2>5</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="8">
+						<label>31148</label>
+						<label2></label2>
+						<onclick>-</onclick>
+					</item>
 					<!--<item id="2">
-						<label>Disable Home</label>
+						<label>31147</label>
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
@@ -88,11 +93,11 @@
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
-					<item id="4">
+					<!--<item id="4">
 						<label>31037</label>
 						<label2>33063</label2>
 						<onclick>-</onclick>
-					</item>
+					</item>-->
 					<item id="5">
 						<label>$LOCALIZE[20342] / $LOCALIZE[31076]</label>
 						<label2>33063</label2>
@@ -126,20 +131,20 @@
 						<onclick>Skin.ToggleSetting(LockViews)</onclick>
 						<selected>Skin.HasSetting(LockViews)</selected>
 					</control>
-					<control type="radiobutton" id="104">
+					<!--<control type="radiobutton" id="104">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31078]</label>
 						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
 						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
 					</control>
 					<control type="button" id="105">
-						<include>skin_settings_button</include>
-						<label> - $LOCALIZE[31040] </label>
+						<include>skin_settings_custom_button</include>
+						<label> - $LOCALIZE[22080] $LOCALIZE[31149]</label>
 						<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
 						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
-					<!--<control type="radiobutton" id="106">
+					<control type="radiobutton" id="106">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31079]</label>
 						<onclick>Skin.ToggleSetting(hometheater)</onclick>
@@ -493,12 +498,12 @@
 								<icon>backgrounds/scripts.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>
 							</item>
-							<item id="18">
+							<!--<item id="18">
 								<label>1036</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/favourites.png</icon>
 								<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>
-							</item>
+							</item>-->
 							<item id="7">
 								<label>13000</label>
 								<onclick>-</onclick>
@@ -1756,12 +1761,20 @@
 							<onclick>Skin.ToggleSetting(new_indicator)</onclick>
 							<selected>Skin.HasSetting(new_indicator)</selected>
 						</control>
+						<control type="radiobutton" id="517">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31021]</label>
+							<onclick>Skin.ToggleSetting(disable_movielogos)</onclick>
+							<selected>Skin.HasSetting(disable_movielogos)</selected>
+							<visible>system.hasaddon(script.artwork.downloader)</visible>
+						</control>
 						<control type="radiobutton" id="512">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31091]</label>
 							<onclick>Skin.ToggleSetting(seasonfanart)</onclick>
 							<onclick>Skin.Reset(extrafanart)</onclick> 
 							<selected>Skin.HasSetting(seasonfanart)</selected>
+							<visible>system.hasaddon(script.artwork.downloader)</visible>
 						</control>
 						<control type="radiobutton" id="513">
 							<include>skin_settings_labels</include>
@@ -1769,8 +1782,9 @@
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
 							<onclick>Skin.Reset(seasonfanart)</onclick> 
 							<selected>Skin.HasSetting(extrafanart)</selected>
+							<visible>system.hasaddon(script.artwork.downloader)</visible>
 						</control>
-						<control type="label" id="514">
+						<!--<control type="label" id="514">
 							<width>860</width>
 							<height>20</height>
 							<textoffsetx>26</textoffsetx>
@@ -1778,13 +1792,13 @@
 							<font>Liberation16</font>
 							<textcolor>Light_Grey</textcolor>
 							<label>*$LOCALIZE[31088]*</label>
-						</control>
+						</control>-->
 						<control type="radiobutton" id="515">
 							<include>skin_settings_labels</include>
 							<label>31019</label>
 							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
 							<selected>Skin.HasSetting(tv_theme)</selected>
-							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
+							<visible>system.hasaddon(script.TvTunes)</visible>
 						</control>
 						<!--<control type="button" id="516">
 							<width>860</width>
@@ -2154,6 +2168,270 @@
 								<visible>Skin.HasSetting(Menu_Custom10) + Skin.String(MoviesCustom,10)</visible>
 							</control>
 						</control>
+					<control type="grouplist" id="9008">
+						<visible>Container(9000).Hasfocus(8)</visible>
+						<posx>300</posx>
+						<posy>430</posy>
+						<width>860</width>
+						<height>268</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9008</onup>
+						<ondown>9008</ondown>
+						<!--<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="200" tween="cubic" easing="inout" condition="Control.HasFocus(719) | Control.HasFocus(8229) | Control.HasFocus(8229)">Conditional</animation>-->
+				<!--Music --><control type="label" id="90080">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>$LOCALIZE[2] $LOCALIZE[1034]</label>
+								<include>skin_settings_button</include>
+							</control>
+							<control type="radiobutton" id="709">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 1</label>
+								<onclick>Skin.ToggleSetting(musiccustom_submenu_one)</onclick>
+								<selected>Skin.HasSetting(musiccustom_submenu_one)</selected>
+							</control>
+							<control type="button" id="90081">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 1</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom1)</onclick>
+								<visible>Skin.HasSetting(musiccustom_submenu_one)</visible>
+							</control>
+							<control type="radiobutton" id="710">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 2</label>
+								<onclick>Skin.ToggleSetting(musiccustom_submenu_2)</onclick>
+								<selected>Skin.HasSetting(musiccustom_submenu_2)</selected>
+							</control>
+							<control type="button" id="90082">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 2</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom2)</onclick>
+								<visible>Skin.HasSetting(musiccustom_submenu_2)</visible>
+							</control>
+							<control type="radiobutton" id="711">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 3</label>
+								<onclick>Skin.ToggleSetting(musiccustom_submenu_3)</onclick>
+								<selected>Skin.HasSetting(musiccustom_submenu_3)</selected>
+							</control>
+							<control type="button" id="90083">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 3</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom3)</onclick>
+								<visible>Skin.HasSetting(musiccustom_submenu_3)</visible>
+							</control>
+			<!--Videos -->  <control type="label" id="90084">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>$LOCALIZE[10006] $LOCALIZE[1034]</label>
+								<include>skin_settings_button</include>
+							</control>
+							<control type="radiobutton" id="712">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 1</label>
+								<onclick>Skin.ToggleSetting(videocustom_submenu_1)</onclick>
+								<selected>Skin.HasSetting(videocustom_submenu_1)</selected>
+							</control>
+							<control type="button" id="90085">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 1</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom4)</onclick>
+								<visible>Skin.HasSetting(videocustom_submenu_1)</visible>
+							</control>
+							<control type="radiobutton" id="713">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 2</label>
+								<onclick>Skin.ToggleSetting(videocustom_submenu_2)</onclick>
+								<selected>Skin.HasSetting(videocustom_submenu_2)</selected>
+							</control>
+							<control type="button" id="90086">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 2</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom5)</onclick>
+								<visible>Skin.HasSetting(videocustom_submenu_2)</visible>
+							</control>
+							<control type="radiobutton" id="714">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 3</label>
+								<onclick>Skin.ToggleSetting(videocustom_submenu_3)</onclick>
+								<selected>Skin.HasSetting(videocustom_submenu_3)</selected>
+							</control>
+							<control type="button" id="90087">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 3</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom6)</onclick>
+								<visible>Skin.HasSetting(videocustom_submenu_3)</visible>
+							</control>
+			<!--Movies -->  <control type="label" id="90088">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>$LOCALIZE[20342] $LOCALIZE[1034]</label>
+								<include>skin_settings_button</include>
+							</control>
+							<control type="radiobutton" id="715">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 1</label>
+								<onclick>Skin.ToggleSetting(moviescustom_submenu_1)</onclick>
+								<selected>Skin.HasSetting(moviescustom_submenu_1)</selected>
+							</control>
+							<control type="button" id="90089">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 1</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom7)</onclick>
+								<visible>Skin.HasSetting(moviescustom_submenu_1)</visible>
+							</control>
+							<control type="radiobutton" id="716">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 2</label>
+								<onclick>Skin.ToggleSetting(moviescustom_submenu_2)</onclick>
+								<selected>Skin.HasSetting(moviescustom_submenu_2)</selected>
+							</control>
+							<control type="button" id="90090">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 2</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom8.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom8)</onclick>
+								<visible>Skin.HasSetting(moviescustom_submenu_2)</visible>
+							</control>
+							<control type="radiobutton" id="717">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 3</label>
+								<onclick>Skin.ToggleSetting(moviescustom_submenu_3)</onclick>
+								<selected>Skin.HasSetting(moviescustom_submenu_3)</selected>
+							</control>
+							<control type="button" id="90091">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 3</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom9.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom10)</onclick>
+								<visible>Skin.HasSetting(moviescustom_submenu_3)</visible>
+							</control>
+			<!--TV -->	    <control type="label" id="90092">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>$LOCALIZE[31004] $LOCALIZE[1034]</label>
+								<include>skin_settings_button</include>
+							</control>
+							<control type="radiobutton" id="718">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 1</label>
+								<onclick>Skin.ToggleSetting(tvcustom_submenu_1)</onclick>
+								<selected>Skin.HasSetting(tvcustom_submenu_1)</selected>
+							</control>
+							<control type="button" id="90093">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 1</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom10.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom10)</onclick>
+								<visible>Skin.HasSetting(tvcustom_submenu_1)</visible>
+							</control>
+							<control type="radiobutton" id="719">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 2</label>
+								<onclick>Skin.ToggleSetting(tvcustom_submenu_2)</onclick>
+								<selected>Skin.HasSetting(tvcustom_submenu_2)</selected>
+							</control>
+							<control type="button" id="90094">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 2</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom11)</onclick>
+								<visible>Skin.HasSetting(tvcustom_submenu_2)</visible>
+							</control>
+							<control type="radiobutton" id="720">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 3</label>
+								<onclick>Skin.ToggleSetting(tvcustom_submenu_3)</onclick>
+								<selected>Skin.HasSetting(tvcustom_submenu_3)</selected>
+							</control>
+							<control type="button" id="90095">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 3</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom12)</onclick>
+								<visible>Skin.HasSetting(tvcustom_submenu_3)</visible>
+							</control>
+			<!--  Addons --><control type="label" id="90096">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>$LOCALIZE[31001] $LOCALIZE[1034]</label>
+								<include>skin_settings_button</include>
+							</control>
+							<control type="radiobutton" id="721">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 1</label>
+								<onclick>Skin.ToggleSetting(addonscustom_submenu_1)</onclick>
+								<selected>Skin.HasSetting(addonscustom_submenu_1)</selected>
+							</control>
+							<control type="button" id="90097">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 1</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom13)</onclick>
+								<visible>Skin.HasSetting(addonscustom_submenu_1)</visible>
+							</control>
+							<control type="radiobutton" id="722">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 2</label>
+								<onclick>Skin.ToggleSetting(addonscustom_submenu_2)</onclick>
+								<selected>Skin.HasSetting(addonscustom_submenu_2)</selected>
+							</control>
+							<control type="button" id="90098">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 2</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom14.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom14)</onclick>
+								<visible>Skin.HasSetting(addonscustom_submenu_2)</visible>
+							</control>
+							<control type="radiobutton" id="723">
+								<description>custom home 8</description>
+								<include>skin_settings_custom_button</include>
+								<label>$LOCALIZE[24022] $LOCALIZE[1034] 3</label>
+								<onclick>Skin.ToggleSetting(addonscustom_submenu_3)</onclick>
+								<selected>Skin.HasSetting(addonscustom_submenu_3)</selected>
+							</control>
+							<control type="button" id="90099">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- $LOCALIZE[31092] 3</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15.Label)][/COLOR]</label2>
+								<include>skin_settings_custom_button</include>
+								<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom15)</onclick>
+								<visible>Skin.HasSetting(addonscustom_submenu_3)</visible>
+							</control>
+					</control>
 				</control>
 			</control>
 		</control>

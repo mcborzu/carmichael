@@ -17,7 +17,6 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font12</font>
-			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="label" id="11">
 			<description>row 2 label</description>
@@ -26,7 +25,6 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font12</font>
-			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="label" id="12">
 			<description>row 3 label</description>
@@ -35,7 +33,6 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font12</font>
-			<include>VisibleFadeEffect</include>
 		</control>
 	</controls>
 </window>

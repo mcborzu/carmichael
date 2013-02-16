@@ -14,20 +14,6 @@
 			<height>40</height>
 			<align>center</align>
 			<orientation>horizontal</orientation>
-				<!--<control type="label">
-					<width min="29" max="200">auto</width>
-					<height>20</height>
-					<font>Liberation18</font>
-					<textcolor>Main_Green</textcolor>
-					<label>[B]ADDONS:[/B]</label>
-				</control>
-				<control type="label" id="1">
-					<width min="29" max="200">auto</width>
-					<height>20</height>
-					<font>Liberation18</font>
-					<textcolor>Main_Green</textcolor>
-					<label> - [B]$INFO[Control.GetLabel(404),,%][/B]</label>
-				</control>-->
 				<control type="label" id="401">
 					<description>Line 1 Label</description>
 					<width min="29" max="500">auto</width>

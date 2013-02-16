@@ -4,7 +4,6 @@
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsActive(selectdialog)</visible>

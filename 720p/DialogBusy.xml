@@ -27,7 +27,7 @@
 				<height>32</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>Please Wait - Loading Selection</label>
+				<label>31072</label>
 				<font>DejaVuSans_Bold_Caps_20</font>
 				<textcolor>Main_Green</textcolor>
 				<animation effect="fade" start="100" end="20" time="1400" loop="true" condition="true">conditional</animation>

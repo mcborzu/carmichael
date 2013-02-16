@@ -75,7 +75,7 @@
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Files</description>
-					<label>Hide Foreign</label>
+					<label>25001</label>
 					<include>WindowMenuButton</include>
 				</control>
 				<control type="radiobutton" id="6">

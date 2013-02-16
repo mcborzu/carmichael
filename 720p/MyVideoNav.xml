@@ -82,14 +82,14 @@
 						<orientation>vertical</orientation>
 						<control type="button" id="88">
 							<include>WindowMenuButton</include>
-							<label>View: $INFO[Container.ViewMode]</label>
+							<label>$LOCALIZE[31040] $INFO[Container.ViewMode]</label>
 							<onclick>Container.NextViewMode</onclick>
 						</control>
 						<control type="togglebutton" id="25">
 							<description>Files</description>
 							<include>WindowMenuButton</include>
-							<label>More Thumbs</label>
-							<altlabel>Less Thumbs</altlabel>
+							<label>31024</label>
+							<altlabel>31025</altlabel>
 							<onclick>Skin.ToggleSetting(more_banners)</onclick>
 							<selected>Skin.HasSetting(more_banners)</selected>
 							<visible>Control.IsVisible(55)</visible>
@@ -176,6 +176,30 @@
 					<textcolor>White</textcolor>
 					<label>$LOCALIZE[31003]</label>
 				</control>
+		</control>
+		
+		<control type="group">
+			<visible>[Control.IsVisible(51) | Control.IsVisible(52)] + Container.Content(tvshows) + !Window.IsVisible(movieinformation) + !Control.HasFocus(2448) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
+			<animation effect="slide"  start="-300,0" end="0,0" time="400" delay="2000" condition="![Container(51).OnNext | Container(51).OnPrevious]">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>360</posy>
+					<width>254</width>
+					<height>59</height>
+					<texture>misc/trailer_indicator.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="label"><!--Trailer Start-->
+					<posx>0</posx>
+					<posy>364</posy>
+					<width>240</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>DejaVuSans_16</font>
+					<textcolor>White</textcolor>
+					<label>$LOCALIZE[31098]</label>
+				</control>	
 		</control>
 		
 	</controls>

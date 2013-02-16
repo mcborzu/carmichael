@@ -51,27 +51,45 @@
 						<label>744</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
 					</control>-->
-					<control type="button" id="90105">
+					<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>14022</label>
 						<onclick>ActivateWindow(Videos)</onclick>
 						<visible>Library.HasContent(Video)</visible>
 					</control>
-					<control type="button" id="90106">
+					<control type="button" id="90102">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>24001</label>
 						<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 					</control>
-					<control type="button" id="90107">
+					<control type="button" id="90103">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[136]</label>
 						<onclick>ActivateWindow(Videos,Playlists,return)</onclick>
 					</control>
-					<control type="button" id="90103">
+					<control type="button" id="90104">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>20389</label>
 						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
 						<visible>Library.HasContent(MusicVideos)</visible>
+					</control>
+					<control type="button" id="90105">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom4.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom4.Path)]</onclick>
+						<visible>Skin.HasSetting(videocustom_submenu_1)</visible>
+					</control>
+					<control type="button" id="90106">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom5.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom5.Path)]</onclick>
+						<visible>Skin.HasSetting(videocustom_submenu_2)</visible>
+					</control>
+					<control type="button" id="90107">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom6.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom6.Path)]</onclick>
+						<visible>Skin.HasSetting(videocustom_submenu_3)</visible>
 					</control>
 				</control>
 <!-- Music -->	<control type="grouplist" id="9011">
@@ -85,9 +103,9 @@
 					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(1)</visible>
-					<control type="button" id="90115">
+					<!--<control type="button" id="90115">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>Genres</label>
+						<label>135</label>
 						<onclick>ActivateWindow(Music,Genres,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
@@ -108,7 +126,7 @@
 						<label>134</label>
 						<onclick>ActivateWindow(Music,Songs,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
-					</control>
+					</control>-->
 					<control type="button" id="90114">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>744</label>
@@ -130,6 +148,24 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[136]</label>
 						<onclick>ActivateWindow(Music,Playlists,return)</onclick>
+					</control>
+					<control type="button" id="90119">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom1.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom1.Path)]</onclick>
+						<visible>Skin.HasSetting(musiccustom_submenu_one)</visible>
+					</control>
+					<control type="button" id="90120">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom2.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom2.Path)]</onclick>
+						<visible>Skin.HasSetting(musiccustom_submenu_2)</visible>
+					</control>
+					<control type="button" id="90121">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom3.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom3.Path)]</onclick>
+						<visible>Skin.HasSetting(musiccustom_submenu_3)</visible>
 					</control>
 				</control>
 <!-- Settings --><control type="grouplist" id="9014">
@@ -175,7 +211,7 @@
 					</control>
 					<control type="button" id="90145">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>Credits</label>
+						<label>470</label>
 						<onclick>ActivateWindow(Credits)</onclick>
 						<visible>False</visible>
 					</control>
@@ -197,52 +233,22 @@
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
 					</control>
 					<control type="button" id="90151">
-						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
-						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
+						<label>$INFO[Skin.String(Menu_Custom13.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom13.Path)]</onclick>
+						<visible>Skin.HasSetting(addonscustom_submenu_1)</visible>
 					</control>
 					<control type="button" id="90152">
-						<description>Button2</description>
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
-						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
+						<label>$INFO[Skin.String(Menu_Custom14.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom14.Path)]</onclick>
+						<visible>Skin.HasSetting(addonscustom_submenu_2)</visible>
 					</control>
 					<control type="button" id="90153">
-						<description>Button3</description>
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
-						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
-					</control>
-					<control type="button" id="90154">
-						<description>Button4</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
-						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
-					</control>
-					<control type="button" id="90155">
-						<description>Button5</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
-						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
-					</control>
-					<control type="button" id="90156">
-						<description>Button6</description>
-						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
-						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
+						<label>$INFO[Skin.String(Menu_Custom15.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom15.Path)]</onclick>
+						<visible>Skin.HasSetting(addonscustom_submenu_3)</visible>
 					</control>
 				</control>
 <!-- Movies -->	<control type="grouplist" id="9016">
@@ -258,45 +264,45 @@
 					<visible>Container(9000).HasFocus(3)</visible>
 					<control type="button" id="90162">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>135</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_genres</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_genres</include>
+						<label>31127</label>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_categories</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_categories</include>
 					</control>
 					<control type="button" id="90163">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>652</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_years</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_years</include>
+						<label>31128</label>
+						<onclick>RunAddon(plugin.video.the.trailers)</onclick>
+						<visible>system.hasaddon(plugin.video.the.trailers)</visible>
 					</control>
 					<control type="button" id="90164">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>344</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_actors</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_actors</include>
-					</control>
-					<control type="button" id="90165">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>20348</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_directors</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_directors</include>
-					</control>
-					<control type="button" id="90166">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31007</label>
 						<include condition="!Skin.HasSetting(cinemascript_home)">movie_recentlyaddedmovies</include>
 						<include condition="Skin.HasSetting(cinemascript_home)">cinema_recentlyaddedmovies</include>
 					</control>
-					<control type="button" id="90176">
+					<control type="button" id="90165">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31027</label>
 						<include condition="!Skin.HasSetting(cinemascript_home)">movie_random_regular</include>
 						<include condition="Skin.HasSetting(cinemascript_home)">movie_random_cinema</include>
 					</control>
-					<control type="button" id="90177">
+					<control type="button" id="90166">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>Last Played</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_lastplayed_regular</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">movie_lastplayed_cinema</include>
+						<label>$INFO[Skin.String(Menu_Custom7.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom7.Path)]</onclick>
+						<visible>Skin.HasSetting(moviescustom_submenu_1)</visible>
+					</control>
+					<control type="button" id="90167">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom8.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom8.Path)]</onclick>
+						<visible>Skin.HasSetting(moviescustom_submenu_2)</visible>
+					</control>
+					<control type="button" id="90168">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom9.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom9.Path)]</onclick>
+						<visible>Skin.HasSetting(moviescustom_submenu_3)</visible>
 					</control>
 				</control>
 <!-- HDMovies --><control type="grouplist" id="9018">
@@ -309,36 +315,30 @@
 					<onup>9000</onup>
 					<ondown></ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(4) + !System.GetBool(pvrmanager.enabled)</visible>
-					<control type="button" id="90162">
+					<visible>Container(9000).HasFocus(4)</visible>
+					<control type="button" id="90182">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>135</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_genres</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_genres</include>
+						<label>31127</label>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_categories</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_categories</include>
 					</control>
-					<control type="button" id="90163">
+					<control type="button" id="90183">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>652</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_years</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_years</include>
+						<label>31128</label>
+						<onclick>RunAddon(plugin.video.the.trailers)</onclick>
+						<visible>system.hasaddon(plugin.video.the.trailers)</visible>
 					</control>
-					<control type="button" id="90164">
+					<control type="button" id="90184">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>344</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_actors</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_actors</include>
+						<label>31007</label>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_recentlyaddedmovies</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_recentlyaddedmovies</include>
 					</control>
-					<control type="button" id="90165">
+					<control type="button" id="90185">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>20348</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_directors</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">cinema_directors</include>
-					</control>
-					<control type="button" id="90176">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>31116</label>
-						<include condition="!Skin.HasSetting(cinemascript_home)">movie_HDrandom_regular</include>
-						<include condition="Skin.HasSetting(cinemascript_home)">movie_HDrandom_cinema</include>
+						<label>31027</label>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_random_regular</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">movie_random_cinema</include>
 					</control>
 				</control>
 <!-- TV -->	    <control type="grouplist" id="9017">
@@ -352,33 +352,41 @@
 					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(5)</visible>
+					<control type="button" id="90171">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31127</label>
+						<onclick>ActivateWindow(Videos,TvShows,return)</onclick>
+					</control>
 					<control type="button" id="90172">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>135</label>
-						<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
-					</control>
-					<control type="button" id="90173">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>652</label>
-						<onclick>ActivateWindow(Videos,TVShowYears,return)</onclick>
-					</control>
-					<control type="button" id="90174">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>344</label>
-						<onclick>ActivateWindow(Videos,TVShowActors,return)</onclick>
-					</control>
-					<control type="button" id="90175">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31008</label>
 						<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
 					</control>
-					<control type="button" id="90176">
+					<control type="button" id="90173">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31026</label>
 						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/random.xsp,return)</onclick>
 					</control>
+					<control type="button" id="90174">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom10.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom10.Path)]</onclick>
+						<visible>Skin.HasSetting(tvcustom_submenu_1)</visible>
+					</control>
+					<control type="button" id="90175">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom11.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom11.Path)]</onclick>
+						<visible>Skin.HasSetting(tvcustom_submenu_2)</visible>
+					</control>
+					<control type="button" id="90176">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom12.Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom12.Path)]</onclick>
+						<visible>Skin.HasSetting(tvcustom_submenu_3)</visible>
+					</control>
 				</control>
-<!-- Live TV --><control type="grouplist" id="9019">
+<!-- Live TV <control type="grouplist" id="9019">
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>240</width>
@@ -411,7 +419,7 @@
 						<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
 						<visible>Library.HasContent(MusicVideos)</visible>
 					</control>
-				</control>
+				</control>-->
 <!-- Weather --><control type="grouplist" id="9017">
 					<posx>10</posx>
 					<posy>0</posy>
@@ -594,7 +602,7 @@
 					<icon>backgrounds/HDmovies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + !System.GetBool(pvrmanager.enabled)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton)</visible>
 				</item>
 				<item id="5">
 					<description>TV shows</description>
@@ -604,14 +612,14 @@
 					<onclick>XBMC.ActivateWindow(Videos,tvshowtitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 				</item>
-				<item id="26">
+				<!--<item id="26">
 					<description>Live TV</description>
 					<label>$LOCALIZE[31126]</label>
 					<icon>backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
 					<onclick>ActivateWindow(PVR)</onclick>
 					<visible>System.GetBool(pvrmanager.enabled)</visible>
-				</item>
+				</item>-->
 				<item id="21">
 					<description>Custom Playlist One</description>
 					<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
@@ -708,14 +716,14 @@
 					<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 				</item>
-				<item id="18">
+				<!--<item id="18">
 					<description>favourites</description>
 					<label>$LOCALIZE[1036]</label>
 					<icon>backgrounds/favourites.png</icon>
 					<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>	
 					<onclick>XBMC.ActivateWindow(favourites)</onclick>
 					<visible>Skin.HasSetting(HomeMenuNofavouritesButton)</visible>
-				</item>
+				</item>-->
 				<item id="14">
 					<description>weather</description>
 					<label>8</label>
@@ -1058,7 +1066,7 @@
 						<align>left</align>
 						<font>DejaVuSans_Bold_Caps_20</font>
 						<textcolor>Black</textcolor>
-						<label>System Stats</label>
+						<label>31107</label>
 					</control>
 					<control type="label">
 						<posx>40</posx>
@@ -1588,7 +1596,7 @@
 					<align>left</align>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Black</textcolor>
-					<label>"The Carmichael"</label>
+					<label>"$LOCALIZE[31022]"</label>
 				</control>
 				<control type="label">
 					<posx>804</posx>
@@ -1608,7 +1616,7 @@
 					<align>left</align>
 					<font>Liberation20</font>
 					<textcolor>Black</textcolor>
-					<label>[COLOR=Darkest_Green][B]$LOCALIZE[31117]:[/B][/COLOR] 1/30/11</label>
+					<label>[COLOR=Darkest_Green][B]$LOCALIZE[31117]:[/B][/COLOR] 2/8/2013</label>
 				</control>
 		</control>
 	</control>

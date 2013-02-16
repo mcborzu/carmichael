@@ -6,7 +6,6 @@
 		<posx>240</posx>
 		<posy>420</posy>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>background image</description>

@@ -11,7 +11,7 @@
 	</variable>
 	
 	<variable name="IconLandscape">
-		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 

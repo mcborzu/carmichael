@@ -296,7 +296,19 @@
 					<fadetime>1000</fadetime>
 					<imagepath background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Path]/extrafanart</imagepath>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(extrafanart) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + ![substring(ListItem.Path,plugin://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,addons://)]</visible>
+					<visible>Skin.HasSetting(extrafanart) + Container.Content(movies) + ![substring(ListItem.Path,plugin://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,addons://)]</visible>
+				</control>
+				<control type="multiimage">
+					<posx>0</posx>
+					<posy>74</posy>
+					<width>747</width>
+					<height>420</height>
+					<timeperimage>7000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+					<imagepath background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Path]/extrafanart</imagepath>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(extrafanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + ![substring(ListItem.Path,plugin://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,addons://)]</visible>
 				</control>
 				<control type="multiimage">
 					<posx>0</posx>
@@ -415,7 +427,18 @@
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<fadetime>300</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(videoplaylist) | Container.Content(movies)</visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(videoplaylist) | [Container.Content(movies) + !Skin.HasSetting(disable_movielogos)]</visible>
+				</control>
+				<control type="image" id="7102">
+					<posx>900</posx>
+					<posy>80</posy>
+					<width>230</width>
+					<height>89</height>
+					<!--<texture background="true">$INFO[ListItem.Path]logo.png</texture>-->
+					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+					<fadetime>300</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(movies) + !Skin.HasSetting(disable_movielogos)</visible>
 				</control>
 				<control type="image" id="7101">
 					<posx>900</posx>
@@ -438,7 +461,19 @@
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<scroll>false</scroll>
-					<visible>[[Container.Content(movies) + IsEmpty(Control.GetLabel(7100))] | [substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)]] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+					<visible>!Skin.HasSetting(disable_movielogos) + [[[Container.Content(movies) + IsEmpty(Control.GetLabel(7102))] | [substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)]] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>760</posx>
+					<posy>100</posy>
+					<width>510</width>
+					<height>76</height>
+					<align>center</align>
+					<font>Liberation28</font>
+					<textcolor>Main_Green</textcolor>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<scroll>false</scroll>
+					<visible>Skin.HasSetting(disable_movielogos) + [[Container.Content(movies) | substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)]] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 				</control>
 				<control type="textbox">
 					<posx>760</posx>
@@ -737,7 +772,7 @@
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
 					<label>$LOCALIZE[31123] - $INFO[ListItem.Premiered]</label>
-					<visible>substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
+					<visible>substring(container.folderpath,plugin://plugin.video.the.trailers) + !IsEmpty(ListItem.Premiered)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
@@ -1044,7 +1079,7 @@
 	<include name="MainPanel_Info_Files">
 		<control type="group">
 		<include>main_window_rightside_open_close</include>
-		<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(LockSettings) | Window.IsActive(custom_DialogFavourites.xml)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsVisible(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(LockSettings) | Window.IsActive(DialogSelect.xml) | Window.IsActive(DialogYesNo.xml)">Conditional</animation>
 			<control type="textbox">
 				<posx>760</posx>
 				<posy>100</posy>
@@ -1627,11 +1662,11 @@
 	</include>
 	
 	
-	<include name="movie_genres">
-		<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
+	<include name="movie_categories">
+		<onclick>ActivateWindow(Videos,movies,return)</onclick>
 	</include>
-	<include name="cinema_genres">
-		<onclick>XBMC.RunScript(script.cinema.experience,moviegenres)</onclick>
+	<include name="cinema_categories">
+		<onclick>XBMC.RunScript(script.cinema.experience,movies)</onclick>
 	</include>
 	<include name="movie_years">
 		<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
@@ -1742,7 +1777,8 @@
 				<control type="label">
 					<include>Global_HeadingSectionVars</include>
 					<label>$INFO[Container.FolderName]</label>
-					<include>Global_HeadingSectionVars + !system.getbool(lookandfeel.enablerssfeeds)</include>
+					<include>Global_HeadingSectionVars</include>
+					<visible>!system.getbool(lookandfeel.enablerssfeeds)</visible>
 				</control>
 				<control type="label">
 					<label>- $INFO[Container.NumItems,, $LOCALIZE[31108]]</label>
@@ -1992,6 +2028,17 @@
 		<textoffsety>8</textoffsety>
 		<font>Liberation20</font>
 		<textcolor>Main_Green</textcolor>
+		<focusedcolor>Black</focusedcolor>
+		<texturefocus>MenuItemFO.png</texturefocus>
+		<texturenofocus>MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="skin_settings_custom_button">
+		<width>860</width>
+		<height>26</height>
+		<textoffsetx>20</textoffsetx>
+		<textoffsety>4</textoffsety>
+		<font>Liberation16</font>
+		<textcolor>White</textcolor>
 		<focusedcolor>Black</focusedcolor>
 		<texturefocus>MenuItemFO.png</texturefocus>
 		<texturenofocus>MenuItemNF.png</texturenofocus>

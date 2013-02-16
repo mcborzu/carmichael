@@ -57,7 +57,7 @@
 						<orientation>horizontal</orientation>
 						<control type="button" id="20">
 							<include>WindowMenuButton</include>
-							<label>View: $INFO[Container.ViewMode]</label>
+							<label>$LOCALIZE[31040] $INFO[Container.ViewMode]</label>
 							<onclick>Container.NextViewMode</onclick>
 						</control>
 						<control type="button" id="3">

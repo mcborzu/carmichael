@@ -236,14 +236,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2001">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>$INFO[Window(Home).Property(PlaylistLastMovieMenu1.1.Play)]</onclick>  
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6558).HasFocus</visible>
 							</control>
 							<control type="button" id="2002">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window(Home).Property(PlaylistLastMovieMenu1.1.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6558).HasFocus + !IsEmpty(Window.Property(RandomMovie.1.Trailer))</visible>
@@ -291,14 +291,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2003">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>$INFO[Window(Home).Property(PlaylistLastMovieMenu1.2.Play)]</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6559).HasFocus</visible>
 							</control>
 							<control type="button" id="2004">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window(Home).Property(PlaylistLastMovieMenu1.2.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6559).HasFocus + !IsEmpty(Window.Property(RandomMovie.2.Trailer))</visible>
@@ -346,14 +346,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2005">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>$INFO[Window(Home).Property(PlaylistLastMovieMenu1.3.Play)]</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6560).HasFocus</visible>
 							</control>
 							<control type="button" id="2006">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window(Home).Property(PlaylistLastMovieMenu1.3.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6560).HasFocus + !IsEmpty(Window.Property(RandomMovie.3.Trailer))</visible>
@@ -401,14 +401,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2007">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.4.Path)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6561).HasFocus</visible>
 							</control>
 							<control type="button" id="2008">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.4.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6561).HasFocus + !IsEmpty(Window.Property(RandomMovie.4.Trailer))</visible>
@@ -456,14 +456,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2009">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.5.Path)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6562).HasFocus</visible>
 							</control>
 							<control type="button" id="2010">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.5.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6562).HasFocus + !IsEmpty(Window.Property(RandomMovie.5.Trailer))</visible>
@@ -511,14 +511,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2011">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.6.Path)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6563).HasFocus</visible>
 							</control>
 							<control type="button" id="2012">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.6.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6563).HasFocus + !IsEmpty(Window.Property(RandomMovie.6.Trailer))</visible>
@@ -566,14 +566,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2013">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.7.Path)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6564).HasFocus</visible>
 							</control>
 							<control type="button" id="2014">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.7.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6564).HasFocus + !IsEmpty(Window.Property(RandomMovie.7.Trailer))</visible>
@@ -621,14 +621,14 @@
 						<onright>8010</onright>
 							<control type="button" id="2015">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Movie</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[342]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.8.Path)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6565).HasFocus</visible>
 							</control>
 							<control type="button" id="2016">
 								<include>skin_settings_trailer_home</include>
-								<label>Play Trailer</label>
+								<label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
 								<onclick>PlayMedia($INFO[Window.Property(RandomMovie.8.Trailer)])</onclick> 
 								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
 								<visible allowhiddenfocus="true">ControlGroup(6565).HasFocus + !IsEmpty(Window.Property(RandomMovie.8.Trailer))</visible>
@@ -690,50 +690,50 @@
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>1 of 4</label>
+							<label>1 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.1.Title),ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>2 of 4</label>
+							<label>2 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.2.Title),ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>3 of 4</label>
+							<label>3 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.3.Title),ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>4 of 4</label>
+							<label>4 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.4.Title),ListItem.Label)</visible>
 						</control>
@@ -783,50 +783,50 @@
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>1 of 4</label>
+							<label>1 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.1.Title),ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>2 of 4</label>
+							<label>2 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.2.Title),ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>3 of 4</label>
+							<label>3 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.3.Title),ListItem.Label)</visible>
 						</control>
 						<control type="label">
-							<posx>346</posx>
+							<posx>320</posx>
 							<posy>2</posy>
 							<width>100</width>
 							<height>20</height>
 							<align>center</align>
 							<font>humanist_521_24</font>
 							<textcolor>White</textcolor>
-							<label>4 of 4</label>
+							<label>4 $LOCALIZE[31129] 4</label>
 							<scroll>false</scroll>
 							<visible>StringCompare(Window(Home).Property(PlaylistLastEpisodeMenu2.4.Title),ListItem.Label)</visible>
 						</control>

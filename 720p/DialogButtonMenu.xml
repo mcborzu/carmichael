@@ -171,7 +171,6 @@
 					<posx>270</posx>
 					<posy>70</posy>
 					<visible>ControlGroup(13).HasFocus</visible>
-					<include>VisibleFadeEffect</include>
 					<animation effect="slide" start="0,0" end="55,0" time="0" condition="System.HasLocks">Conditional</animation>
 					<animation effect="slide" start="0,0" end="55,0" time="0" condition="System.HasLoginScreen + System.LoggedOn">Conditional</animation>
 					<control type="image">
