@@ -39,7 +39,7 @@
 				<width>570</width>
 				<height>30</height>
 				<font>DejaVuSans_Bold_Caps_50</font>
-				<label>A</label>
+				<label>31005</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>Main_Green</textcolor>
@@ -177,7 +177,7 @@
 				<width>570</width>
 				<height>30</height>
 				<font>DejaVuSans_Bold_Caps_50</font>
-				<label>B</label>
+				<label>31006</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>Main_Green</textcolor>

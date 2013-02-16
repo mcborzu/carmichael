@@ -14,7 +14,7 @@
 			<scrolltime>200</scrolltime>
 			<focusposition>1</focusposition>
 			<orientation>vertical</orientation>
-			<viewtype label="Songs">list</viewtype>
+			<viewtype label="134">list</viewtype>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<onup>52</onup>
@@ -78,17 +78,7 @@
 			</focusedlayout>
 		</control>
 	
-	<control type="label">
-		<posx>520</posx>
-		<posy>410</posy>
-		<width>600</width>
-		<height>20</height>
-		<font>DefaultCaps_30</font>
-		<textcolor>Black</textcolor>
-		<scroll>false</scroll>
-		<label>[B]SONGS[/B]</label>
-		<visible>Control.IsVisible(52)</visible>
-	</control>
+	
 	
 	<control type="group">
 		<animation effect="slide" start="0,0" end="-320,-10" time="400" delay="600" condition="Container.Content(songs)">Conditional</animation>

@@ -263,7 +263,7 @@
 				<control type="group">
 					<posx>0</posx>
 					<posy>10</posy>
-					<animation type="Visible" reversible="false" condition="Control.HasFocus(2449))">
+					<animation type="Visible" reversible="false" condition="Control.HasFocus(2449)">
 						<effect type="slide" start="900,0" end="0,0" time="500" delay="400" />
 					</animation>
 					<visible>Control.HasFocus(2449)</visible>
@@ -292,7 +292,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="60" end="110" time="600" tween="back" easing="out" />
 					</animation>
-					<animation type="Visible" reversible="false" condition="Control.HasFocus(2449))">
+					<animation type="Visible" reversible="false" condition="Control.HasFocus(2449)">
 						<effect type="slide" start="900,0" end="0,0" time="500" delay="400" />
 					</animation>
 					<visible>Control.HasFocus(2449)</visible>
@@ -437,7 +437,7 @@
 		<textcolor>Dark_Green</textcolor>
 		<label fallback="-">[B]$INFO[Container(2449).ListItem.Property(Number)] - $INFO[Container(2449).ListItem.Label][/B]</label>
 		<include>Animation_CommonFade</include>
-		<animation type="Visible" reversible="false" condition="Control.HasFocus(2449))">
+		<animation type="Visible" reversible="false" condition="Control.HasFocus(2449)">
 			<effect type="slide" start="900,0" end="0,0" time="500" delay="700" />
 		</animation>
 		<visible>Container.Content(tvshows) + Control.HasFocus(2449)</visible>
@@ -451,7 +451,7 @@
 		<label fallback="-">$INFO[Container(2449).ListItem.Property(Plot)]</label>
 		<font>Liberation18</font>
 		<textcolor>Black</textcolor>
-		<animation type="Visible" reversible="false" condition="Control.HasFocus(2449))">
+		<animation type="Visible" reversible="false" condition="Control.HasFocus(2449)">
 			<effect type="slide" start="900,0" end="0,0" time="500" delay="600" />
 		</animation>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

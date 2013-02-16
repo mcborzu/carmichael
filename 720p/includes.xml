@@ -473,7 +473,7 @@
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<scroll>false</scroll>
-					<visible>Skin.HasSetting(disable_movielogos) + [[Container.Content(movies) | substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)]] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
+					<visible>Skin.HasSetting(disable_movielogos) + [[Container.Content(movies) | substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 				</control>
 				<control type="textbox">
 					<posx>760</posx>
@@ -778,112 +778,112 @@
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated G</label>
+					<label>$LOCALIZE[31130]</label>
 					<visible>substring(listitem.mpaa,Rated G) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated PG</label>
+					<label>$LOCALIZE[31131]</label>
 					<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated PG-13</label>
+					<label>$LOCALIZE[31132]</label>
 					<visible>substring(listitem.mpaa,Rated PG-13) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated R</label>
+					<label>$LOCALIZE[31133]</label>
 					<visible>substring(listitem.mpaa,Rated R) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated NC-17</label>
+					<label>$LOCALIZE[31134]</label>
 					<visible>substring(listitem.mpaa,Rated NC) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:U</label>
+					<label>$LOCALIZE[31135]</label>
 					<visible>substring(listitem.mpaa,UK:U) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:PG</label>
+					<label>$LOCALIZE[31136]</label>
 					<visible>substring(listitem.mpaa,UK:PG) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:12</label>
+					<label>$LOCALIZE[31137]</label>
 					<visible>substring(listitem.mpaa,UK:12) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:12A</label>
+					<label>$LOCALIZE[31138]</label>
 					<visible>substring(listitem.mpaa,UK:12A) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:15</label>
+					<label>$LOCALIZE[31139]</label>
 					<visible>substring(listitem.mpaa,UK:15) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:18</label>
+					<label>$LOCALIZE[31140]</label>
 					<visible>substring(listitem.mpaa,UK:18) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated UK:R18</label>
+					<label>$LOCALIZE[31141]</label>
 					<visible>substring(listitem.mpaa,UK:R18) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated 10 ans</label>
+					<label>$LOCALIZE[31142]</label>
 					<visible>substring(listitem.mpaa,10 ans) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated 12 ans</label>
+					<label>$LOCALIZE[31143]</label>
 					<visible>substring(listitem.mpaa,12 ans) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated 16 ans</label>
+					<label>$LOCALIZE[31144]</label>
 					<visible>substring(listitem.mpaa,16 ans) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - Rated 18 ans</label>
+					<label>$LOCALIZE[31145]</label>
 					<visible>substring(listitem.mpaa,18 ans) + !substring(container.folderpath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 		</control>

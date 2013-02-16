@@ -39,11 +39,11 @@ msgid "TV Shows"
 msgstr ""
 
 msgctxt "#31005"
-msgid "Scanning Videos"
+msgid "A"
 msgstr ""
 
 msgctxt "#31006"
-msgid "Scanning Music"
+msgid "B"
 msgstr ""
 
 msgctxt "#31007"
