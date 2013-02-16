@@ -496,7 +496,7 @@
 					<label>$LOCALIZE[31120]</label>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist) | substring(listitem.path,special://masterprofile)</visible>
 				</control>
 				<control type="textbox">
@@ -604,7 +604,7 @@
 					<info>ListItem.Plot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(videoplaylist) | stringcompare(container.folderpath,videodb://5/) | substring(container.folderpath,plugin://)</visible>
 				</control>
 				<!--<control type="label">
@@ -627,7 +627,7 @@
 					<info>ListItem.Plot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>Container.Content(episodes) + !Control.IsVisible(54)</visible>
 				</control>
 				<control type="textbox">
@@ -639,7 +639,7 @@
 					<info>Container(50).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
 				</control>
 				<control type="textbox">
@@ -651,7 +651,7 @@
 					<info>Container(51).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>Control.IsVisible(51) + Container.Content(seasons)</visible>
 				</control>
 				<control type="textbox">
@@ -663,7 +663,7 @@
 					<info>Container(52).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>Control.IsVisible(52) + Container.Content(seasons)</visible>
 				</control>
 				<control type="textbox">
@@ -675,7 +675,7 @@
 					<info>Container(54).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<scroll>false</scroll>
 					<visible>Control.IsVisible(54) + Container.Content(episodes)</visible>
 				</control>
 				<!--<control type="label">
@@ -949,7 +949,7 @@
 				<label>$INFO[ListItem.Property(Artist_Description)]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Container.Content(artists)</visible>
 			</control>
 			<control type="textbox">
@@ -961,7 +961,7 @@
 				<label>$INFO[ListItem.Property(Album_Description)]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Container.Content(albums)</visible>
 			</control>
 		</control>
@@ -1124,7 +1124,7 @@
 				<label>$LOCALIZE[31016]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Container.Content(Files) + ![substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist) | substring(listitem.path,special://masterprofile) | SubString(ListItem.Icon,DefaultFolderBack.png,Left) | substring(listitem.path,videodb://) | substring(listitem.path,sources://) | substring(listitem.path,addons://sources/) | substring(listitem.path,plugin://) | substring(listitem.path,rtmp://) | substring(listitem.path,http://)]</visible>
 			</control>
 			<control type="textbox">
@@ -1160,7 +1160,7 @@
 				<label>$LOCALIZE[31109]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(filemanager)</visible>
 			</control>
 			<control type="textbox">
@@ -1304,7 +1304,7 @@
 				<label>$LOCALIZE[31066]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(SkinSettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1316,7 +1316,7 @@
 				<label>$LOCALIZE[31061]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(videossettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1328,7 +1328,7 @@
 				<label>$LOCALIZE[31062]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(musicsettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1340,7 +1340,7 @@
 				<label>$LOCALIZE[31063]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(picturessettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1352,7 +1352,7 @@
 				<label>$LOCALIZE[31045]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(weathersettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1364,7 +1364,7 @@
 				<label>$LOCALIZE[31064]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(ServiceSettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1376,7 +1376,7 @@
 				<label>$LOCALIZE[31065]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(systemsettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1388,7 +1388,7 @@
 				<label>$LOCALIZE[31060]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 				<visible>Window.IsActive(appearancesettings)</visible>
 			</control>
 		</control>
@@ -1430,7 +1430,7 @@
 				<info>ListItem.Property(Addon.Description)</info>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -1441,7 +1441,7 @@
 				<info>ListItem.Plot</info>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 			</control>
 			<control type="label">
 				<posx>760</posx>
@@ -1599,7 +1599,7 @@
 				<info>ListItem.Property(plot)</info>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<scroll>false</scroll>
 			</control>
 			<control type="label">
 				<posx>760</posx>

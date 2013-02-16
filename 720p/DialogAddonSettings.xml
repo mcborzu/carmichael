@@ -157,7 +157,7 @@
 			<font>Liberation16</font>
 			<textcolor>White</textcolor>
 			<focusedcolor>Black</focusedcolor>
-			<label>-</label>
+			<label></label>
 			<align>left</align>
 			<aligny>center</aligny>
 		</control>
