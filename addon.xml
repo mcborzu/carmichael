@@ -19,6 +19,7 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en">The Carmichael - A skin for XBMC</summary>
     <description lang="en">The Carmichael is designed to presesent your media through a unified interface. Easy of use and a common design thoughtout all views is the goal.</description>
+	<disclaimer>Not PVR, Touchscreen, or Mouse compatible</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
