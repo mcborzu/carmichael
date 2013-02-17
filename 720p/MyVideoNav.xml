@@ -91,7 +91,6 @@
 							<label>31024</label>
 							<altlabel>31025</altlabel>
 							<onclick>Skin.ToggleSetting(more_banners)</onclick>
-							<selected>Skin.HasSetting(more_banners)</selected>
 							<visible>Control.IsVisible(55)</visible>
 						</control>
 						<control type="button" id="3">

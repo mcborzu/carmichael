@@ -208,12 +208,7 @@
 						<textoffsety>8</textoffsety>
 						<font>Liberation20</font>
 						<textcolor>Main_Green</textcolor>
-						<focusedcolor>Black</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<label>**$LOCALIZE[31032]**</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
 					</control>
 					<control type="radiobutton" id="215">
 						<description>Hide Music Button</description>

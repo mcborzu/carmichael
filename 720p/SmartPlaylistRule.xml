@@ -65,7 +65,6 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>White</textcolor>
-				<focusedcolor>Black</focusedcolor>
 			</control>
 			<control type="spincontrolex" id="16">
 				<description>Rule operator</description>
@@ -92,7 +91,6 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>White</textcolor>
-				<focusedcolor>Black</focusedcolor>
 			</control>
 		</control>
 		<control type="button" id="17">

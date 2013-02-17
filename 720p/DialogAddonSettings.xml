@@ -156,7 +156,6 @@
 			<height>30</height>
 			<font>Liberation16</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>Black</focusedcolor>
 			<label></label>
 			<align>left</align>
 			<aligny>center</aligny>

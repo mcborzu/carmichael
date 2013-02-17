@@ -460,7 +460,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<scroll>false</scroll>
 					<visible>!Skin.HasSetting(disable_movielogos) + [[[Container.Content(movies) + IsEmpty(Control.GetLabel(7102))] | [substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)]] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 				</control>
 				<control type="textbox">
@@ -472,7 +471,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<scroll>false</scroll>
 					<visible>Skin.HasSetting(disable_movielogos) + [[Container.Content(movies) | substring(container.folderpath,plugin://) | substring(container.folderpath,addons://sources/)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 				</control>
 				<control type="textbox">
@@ -484,7 +482,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$LOCALIZE[20012][/B]</label>
-					<scroll>false</scroll>
 					<visible>[substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist) | substring(listitem.path,special://masterprofile)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -496,7 +493,6 @@
 					<label>$LOCALIZE[31120]</label>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist) | substring(listitem.path,special://masterprofile)</visible>
 				</control>
 				<control type="textbox">
@@ -508,7 +504,6 @@
 					<info>ListItem.Property(Addon.Description)</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>substring(container.folderpath,addons://sources/)</visible> 
 				</control>
 				<control type="textbox">
@@ -520,7 +515,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<scroll>false</scroll>
 					<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7100)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -532,7 +526,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
-					<scroll>false</scroll>
 					<visible>[Container.Content(episodes) | Container.Content(seasons) | Window.IsActive(videoplaylist)] + !substring(container.folderpath,plugin://plugin.video.hulu) + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -544,7 +537,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$LOCALIZE[31010][/B]</label>
-					<scroll>false</scroll>
 					<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -556,7 +548,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$LOCALIZE[31114] $LOCALIZE[135][/B]</label>
-					<scroll>false</scroll>
 					<visible>Container.Content(genres) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -568,7 +559,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$LOCALIZE[31114] $LOCALIZE[652][/B]</label>
-					<scroll>false</scroll>
 					<visible>Container.Content(years) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -580,7 +570,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$LOCALIZE[31114] $LOCALIZE[20348][/B]</label>
-					<scroll>false</scroll>
 					<visible>Container.Content(directors) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -592,7 +581,6 @@
 					<font>Liberation28</font>
 					<textcolor>Main_Green</textcolor>
 					<label>[B]$LOCALIZE[31114] $LOCALIZE[344][/B]</label>
-					<scroll>false</scroll>
 					<visible>Container.Content(actors) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="textbox">
@@ -604,7 +592,6 @@
 					<info>ListItem.Plot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(videoplaylist) | stringcompare(container.folderpath,videodb://5/) | substring(container.folderpath,plugin://)</visible>
 				</control>
 				<!--<control type="label">
@@ -627,7 +614,6 @@
 					<info>ListItem.Plot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>Container.Content(episodes) + !Control.IsVisible(54)</visible>
 				</control>
 				<control type="textbox">
@@ -639,7 +625,6 @@
 					<info>Container(50).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
 				</control>
 				<control type="textbox">
@@ -651,7 +636,6 @@
 					<info>Container(51).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>Control.IsVisible(51) + Container.Content(seasons)</visible>
 				</control>
 				<control type="textbox">
@@ -663,7 +647,6 @@
 					<info>Container(52).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>Control.IsVisible(52) + Container.Content(seasons)</visible>
 				</control>
 				<control type="textbox">
@@ -675,7 +658,6 @@
 					<info>Container(54).ShowPlot</info>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
-					<scroll>false</scroll>
 					<visible>Control.IsVisible(54) + Container.Content(episodes)</visible>
 				</control>
 				<!--<control type="label">
@@ -901,7 +883,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<scroll>false</scroll>
 				<visible>![Container.Content(songs) | Container.Content(genres)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -913,7 +894,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Album][/B]</label>
-				<scroll>false</scroll>
 				<visible>Container.Content(songs) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -925,7 +905,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31010][/B]</label>
-				<scroll>false</scroll>
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -937,7 +916,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31114] $LOCALIZE[135][/B]</label>
-				<scroll>false</scroll>
 				<visible>Container.Content(genres) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -949,7 +927,6 @@
 				<label>$INFO[ListItem.Property(Artist_Description)]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Container.Content(artists)</visible>
 			</control>
 			<control type="textbox">
@@ -961,7 +938,6 @@
 				<label>$INFO[ListItem.Property(Album_Description)]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Container.Content(albums)</visible>
 			</control>
 		</control>
@@ -1089,7 +1065,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31011][/B]</label>
-				<scroll>false</scroll>
 				<visible>Container.Content(Files) + ![substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist) | substring(listitem.path,special://masterprofile) | SubString(ListItem.Icon,DefaultFolderBack.png,Left) | substring(listitem.path,videodb://) | substring(listitem.path,sources://) | substring(listitem.path,addons://sources/) | substring(listitem.path,plugin://) | substring(listitem.path,rtmp://) | substring(listitem.path,http://) | Window.IsActive(MyMusicSongs.xml)]</visible>
 			</control>
 			<!--<control type="textbox">
@@ -1101,7 +1076,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.path][/B]</label>
-				<scroll>false</scroll>
 			</control>-->
 			<control type="textbox">
 				<posx>760</posx>
@@ -1112,7 +1086,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31012][/B]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(musicfiles)</visible>
 			</control>
 			<control type="textbox">
@@ -1124,7 +1097,6 @@
 				<label>$LOCALIZE[31016]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Container.Content(Files) + ![substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist) | substring(listitem.path,special://masterprofile) | SubString(ListItem.Icon,DefaultFolderBack.png,Left) | substring(listitem.path,videodb://) | substring(listitem.path,sources://) | substring(listitem.path,addons://sources/) | substring(listitem.path,plugin://) | substring(listitem.path,rtmp://) | substring(listitem.path,http://)]</visible>
 			</control>
 			<control type="textbox">
@@ -1136,7 +1108,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$INFO[Container(9000).ListItem.Label2]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(settings)</visible>
 			</control>
 			<control type="textbox">
@@ -1148,7 +1119,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[7][/B]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(filemanager)</visible>
 			</control>
 			<control type="textbox">
@@ -1160,7 +1130,6 @@
 				<label>$LOCALIZE[31109]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(filemanager)</visible>
 			</control>
 			<control type="textbox">
@@ -1172,7 +1141,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[Container(2).ListItem.Label][/B]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(profiles)</visible>
 			</control>
 			<control type="label">
@@ -1184,7 +1152,6 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<label>$LOCALIZE[31046] - $INFO[Container(2).ListItem.Label2]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(profiles) + !IsEmpty(Container(2).ListItem.Label2)</visible>
 			</control>
 			<control type="label">
@@ -1196,7 +1163,6 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<label>$LOCALIZE[31046] - $LOCALIZE[13170]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(profiles) + IsEmpty(Container(2).ListItem.Label2)</visible>
 			</control>
 			<control type="textbox">
@@ -1208,7 +1174,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31051]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(videossettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1220,7 +1185,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31056]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(systemsettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1232,7 +1196,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31050]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(appearancesettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1244,7 +1207,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31052]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(musicsettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1256,7 +1218,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31053]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(picturessettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1268,7 +1229,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31055]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(ServiceSettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1280,7 +1240,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31054]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(weathersettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1292,7 +1251,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[31057]</label>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(SkinSettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1304,7 +1262,6 @@
 				<label>$LOCALIZE[31066]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(SkinSettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1316,7 +1273,6 @@
 				<label>$LOCALIZE[31061]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(videossettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1328,7 +1284,6 @@
 				<label>$LOCALIZE[31062]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(musicsettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1340,7 +1295,6 @@
 				<label>$LOCALIZE[31063]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(picturessettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1352,7 +1306,6 @@
 				<label>$LOCALIZE[31045]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(weathersettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1364,7 +1317,6 @@
 				<label>$LOCALIZE[31064]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(ServiceSettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1376,7 +1328,6 @@
 				<label>$LOCALIZE[31065]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(systemsettings)</visible>
 			</control>
 			<control type="textbox">
@@ -1388,7 +1339,6 @@
 				<label>$LOCALIZE[31060]</label>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 				<visible>Window.IsActive(appearancesettings)</visible>
 			</control>
 		</control>
@@ -1406,7 +1356,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<scroll>false</scroll>
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -1418,7 +1367,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31010][/B]</label>
-				<scroll>false</scroll>
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -1430,7 +1378,6 @@
 				<info>ListItem.Property(Addon.Description)</info>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -1441,7 +1388,6 @@
 				<info>ListItem.Plot</info>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 			</control>
 			<control type="label">
 				<posx>760</posx>
@@ -1508,7 +1454,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<scroll>false</scroll>
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -1520,7 +1465,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31010][/B]</label>
-				<scroll>false</scroll>
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="grouplist">
@@ -1575,7 +1519,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<scroll>false</scroll>
 				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -1587,7 +1530,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31010][/B]</label>
-				<scroll>false</scroll>
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
@@ -1599,7 +1541,6 @@
 				<info>ListItem.Property(plot)</info>
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
 			</control>
 			<control type="label">
 				<posx>760</posx>

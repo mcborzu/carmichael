@@ -72,7 +72,7 @@
 				<width>200</width>
 				<height>200</height>
 				<texture>$INFO[Player.FolderPath]cdart.png</texture>
-				<aspectratio align="bottom">keep</aspectratio>
+				<aspectratio aligny="bottom">keep</aspectratio>
 				<include>cdartspin</include>
 			</control>
 			<control type="image">

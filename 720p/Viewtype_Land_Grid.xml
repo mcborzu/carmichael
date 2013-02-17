@@ -78,7 +78,6 @@
 							<align>center</align>
 							<font>DejaVuSans_Bold_Caps_18</font>
 							<textcolor>White</textcolor>
-							<scroll>false</scroll>
 							<label>$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 							<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>
@@ -90,7 +89,6 @@
 							<align>center</align>
 							<font>DejaVuSans_Bold_Caps_18</font>
 							<textcolor>White</textcolor>
-							<scroll>false</scroll>
 							<label>[B]$LOCALIZE[31010][/B]</label>
 							<visible>Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>
@@ -168,7 +166,6 @@
 							<align>center</align>
 							<font>DejaVuSans_Bold_Caps_18</font>
 							<textcolor>Main_Green</textcolor>
-							<scroll>false</scroll>
 							<label>$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 							<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>
@@ -180,7 +177,6 @@
 							<align>center</align>
 							<font>DejaVuSans_Bold_Caps_18</font>
 							<textcolor>Main_Green</textcolor>
-							<scroll>false</scroll>
 							<label>[B]$LOCALIZE[31010][/B]</label>
 							<visible>Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>

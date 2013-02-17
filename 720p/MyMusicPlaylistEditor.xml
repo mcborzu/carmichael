@@ -18,7 +18,6 @@
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$LOCALIZE[31146][/B]</label>
-				<scroll>false</scroll>
 				<visible>!Window.IsActive(contextmenu)</visible>
 			</control>
 			<control type="group" id="9000">
