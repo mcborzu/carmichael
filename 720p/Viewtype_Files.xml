@@ -200,6 +200,14 @@
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(mediasource)">Conditional</animation>
 			<include>recent_right_side</include>
 			<visible>Control.IsVisible(50)</visible>
+				<control type="image" id="7916">
+					<posx>210</posx>
+					<posy>430</posy>
+					<width>260</width>
+					<height>260</height>
+					<texture>$INFO[Listitem.path]cdart.png</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
 				<control type="image">
 					<posx>60</posx>
 					<posy>420</posy>
@@ -210,6 +218,7 @@
 					<bordersize>8</bordersize>
 					<fadetime>300</fadetime>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="-110,0" time="700" delay="900" condition="!IsEmpty(Control.GetLabel(7916))">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>60</posx>
@@ -222,6 +231,7 @@
 					<bordersize>8</bordersize>
 					<fadetime>300</fadetime>
 					<aspectratio align="right" aligny="top">keep</aspectratio>
+					<animation effect="slide" start="0,0" end="-110,0" time="700" delay="900" condition="!IsEmpty(Control.GetLabel(7916))">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>430</posx>
@@ -246,7 +256,6 @@
 			<onright>50</onright>
 			<showonepage>true</showonepage>
 			<orientation>vertical</orientation>
-			<include>Animation_CommonFade</include>
 			<animation effect="slide" start="200,0" end="0,0" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
 		</control>
 	

@@ -436,7 +436,6 @@
 		<font>Liberation24</font>
 		<textcolor>Dark_Green</textcolor>
 		<label fallback="-">[B]$INFO[Container(2449).ListItem.Property(Number)] - $INFO[Container(2449).ListItem.Label][/B]</label>
-		<include>Animation_CommonFade</include>
 		<animation type="Visible" reversible="false" condition="Control.HasFocus(2449)">
 			<effect type="slide" start="900,0" end="0,0" time="500" delay="700" />
 		</animation>
@@ -459,7 +458,6 @@
 	</control>
 	
 	<control type="scrollbar" id="62">
-		<include>Animation_ZoomInZoomOut</include>
 		<posx>0</posx>
 		<posy>900</posy>
 		<width>1280</width>
@@ -471,7 +469,6 @@
 		<ondown>52</ondown>
 		<showonepage>true</showonepage>
 		<orientation>horizontal</orientation>
-		<include>Animation_CommonFade</include>
 		<animation effect="slide" start="0,0" end="0,-200" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
 	</control>
 		

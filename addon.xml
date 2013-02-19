@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.carmichael" version="5.0.8" name="Carmichael" provider-name="Mcborzu">
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.carmichael" version="5.0.9" name="Carmichael" provider-name="Mcborzu">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
 	<import addon="script.favourites" version="4.0.4"/>

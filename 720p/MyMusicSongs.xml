@@ -22,7 +22,6 @@
 	</control>
 	
 	<include>main_back</include>
-	<include>main_fanart_diffuse</include>
 	<include>main_fanart_files</include>
   
   

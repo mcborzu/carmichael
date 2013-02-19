@@ -1,7 +1,6 @@
 <includes>
   
-	<include file="Defaults.xml" />
-	<include file="CommonViews.xml" />
+	<include file="defaults.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesHome_Random.xml" />
 	<include file="IncludesCodecFlagging.xml" />
@@ -19,7 +18,6 @@
 	<include file="Viewtype_Pictures.xml" />
 	<include file="Viewtype_Banner.xml" />
 	<include file="Viewtype_Landscape_Programs.xml" />
-	<include file="Viewtype_Showcase.xml" />
 	<include file="Viewtype_Land_Grid.xml" />
 	
 	<include name="no_tv_theme">
@@ -427,7 +425,7 @@
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<fadetime>300</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(videoplaylist) | [Container.Content(movies) + !Skin.HasSetting(disable_movielogos)]</visible>
+					<visible>Container.Content(tvshows) | Window.IsActive(videoplaylist)</visible>
 				</control>
 				<control type="image" id="7102">
 					<posx>900</posx>
@@ -2024,6 +2022,34 @@
 		<include>VideoTypeHackFlaggingConditions_flat</include>
 	</include>
 	
-	
+	<include name="cdartspin">
+		<animation type="WindowOpen">
+			<effect type="slide" end="95" tween="cubic" easing="out" delay="1000" time="2000" />
+			<effect type="rotate" center="auto" end="234" time="3250" />
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Playing">
+			<effect type="slide" start="95" end="0" tween="cubic" easing="out" time="2000" />
+			<effect type="rotate" center="auto" start="0" end="20" time="500" />
+			<effect type="rotate" center="auto" start="0" end="25" time="500" delay="500" />
+			<effect type="rotate" center="auto" start="0" end="30" time="500" delay="1000" />
+			<effect type="rotate" center="auto" start="0" end="36" time="500" delay="1500" />
+		</animation>
+
+		<animation effect="rotate" end="-36000" center="auto" time="500000" loop="true" reversible="false" condition="true">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="3000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding4x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1500" loop="true" reversible="false" condition="Player.Forwarding8x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1000" loop="true" reversible="false" condition="Player.Forwarding16x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="500" loop="true" reversible="false" condition="Player.Forwarding32x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="3000" loop="true" reversible="false" condition="Player.Rewinding2x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="2000" loop="true" reversible="false" condition="Player.Rewinding4x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1500" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1000" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="500" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
+		<animation effect="rotate" end="36000" center="auto" time="500000" loop="true" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-28" center="auto" time="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
+	</include>
 	
 </includes>

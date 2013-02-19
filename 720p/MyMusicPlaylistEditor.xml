@@ -8,7 +8,6 @@
 		<include>top_section</include>
 		<control type="group">
 			<posy>10</posy>
-			<include>Window_OpenClose_Animation</include>
 			<control type="textbox">
 				<posx>760</posx>
 				<posy>100</posy>

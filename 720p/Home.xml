@@ -729,7 +729,7 @@
 					<label>8</label>
 					<icon>backgrounds/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>				
-					<onclick>-</onclick>
+					<onclick>noop</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !Skin.HasSetting(conditions_weather_backdrop)</visible>
 				</item>
 				<item id="8">
@@ -737,7 +737,7 @@
 					<label>8</label>
 					<icon>backgrounds/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</thumb>				
-					<onclick>-</onclick>
+					<onclick>noop</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + Skin.HasSetting(conditions_weather_backdrop)</visible>
 				</item>
 				<item id="9">
@@ -1635,7 +1635,7 @@
 	<include>top_section</include>
 	<include>Global_Time</include>
 	<include>Breadcrumbs</include>
-	<include>Global_RSS</include>
+	
 	
 	
   

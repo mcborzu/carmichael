@@ -56,6 +56,17 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>60</posy>
+						<width>355</width>
+						<height>76</height>
+						<align>center</align>
+						<font>DejaVuSans_Bold_Caps_50</font>
+						<textcolor>Black</textcolor>
+						<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
+						<visible>Container.Content(seasons) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !isempty(ListItem.Season)</visible>
+					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -202,6 +213,17 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
 						<visible>stringcompare(ListItem.Label,..)</visible>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>70</posy>
+						<width>451</width>
+						<height>76</height>
+						<align>center</align>
+						<font>DejaVuSans_Bold_Caps_60</font>
+						<textcolor>Black</textcolor>
+						<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
+						<visible>Container.Content(seasons) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !isempty(ListItem.Season)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>

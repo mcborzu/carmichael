@@ -24,7 +24,6 @@
 			<include>Viewtype_Files</include><!-- 50 -->
 			<include>Viewtype_MusicWrap</include><!-- 51 -->
 			<include>Viewtype_Music_Grid</include><!-- 53 -->
-			<include>Viewtype_Showcase</include><!-- 57 -->
 	</control>
 	
 	<control type="group">

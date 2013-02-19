@@ -175,7 +175,6 @@
 	
 	
 	<control type="scrollbar" id="61">
-		<include>Animation_ZoomInZoomOut</include>
 		<posx>0</posx>
 		<posy>900</posy>
 		<width>1280</width>
@@ -187,7 +186,6 @@
 		<ondown>51</ondown>
 		<showonepage>true</showonepage>
 		<orientation>horizontal</orientation>
-		<include>Animation_CommonFade</include>
 		<animation effect="slide" start="0,0" end="0,-200" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(61)">Conditional</animation>
 	</control>
 		

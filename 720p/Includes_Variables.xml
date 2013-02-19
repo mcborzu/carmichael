@@ -12,6 +12,7 @@
 	
 	<variable name="IconLandscape">
 		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Path,,season]$INFO[ListItem.Season,,-landscape.jpg]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 

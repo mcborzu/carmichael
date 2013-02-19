@@ -49,7 +49,6 @@
 				<!--<include>Viewtype_Episode4Grid</include> 54 -->
 				<include>Viewtype_Banner</include><!-- 55 -->
 				<include>Viewtype_Land_Grid</include><!-- 56 -->
-				<!--<include>Viewtype_Showcase</include> 57 -->
 		</control>
 		
 	<control type="group">

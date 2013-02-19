@@ -93,31 +93,31 @@
 					<item>
 						<label>$LOCALIZE[24051]</label>
 						<label2>$INFO[ListItem.Property(Addon.Version)]</label2>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[146]</label>
 						<label2>$INFO[ListItem.Property(Addon.Type)]</label2>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<visible>!IsEmpty(ListItem.Property(Addon.Type))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31013]</label>
 						<label2>$INFO[ListItem.Property(Addon.Creator)]</label2>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[15311]</label>
 						<label2>$INFO[ListItem.FilenameAndPath]</label2>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<visible>!IsEmpty(ListItem.FilenameAndPath)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[24052]:</label>
 						<label2>$INFO[ListItem.Property(Addon.Disclaimer)]</label2>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
 					</item>
 				</content>
